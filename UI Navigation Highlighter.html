@@ -1,0 +1,146 @@
+<!-- Adam Lucas -->
+<!-- 10/13/2022 -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+<!-- Setting the style for each card -->
+
+.card {
+
+height: 200px;
+
+width: 200px;
+
+border: 1px solid black;
+
+margin: 20px;
+
+display: flex;
+
+justify-content: center;
+
+align-items: center;
+
+cursor: pointer;
+
+}
+
+<!-- Setting the style for the div -->
+
+.main-div{
+
+display: flex;
+
+flex-wrap: wrap;
+
+}
+
+<!-- Setting the style for the clicked elements -->
+
+.click{
+
+background-color: #FFA500;
+
+font-weight: bold;
+
+}
+
+#clickedItem{
+
+font-size: 25px;
+
+font-weight: bold;
+
+display: flex;
+
+justify-content: center;
+
+width: 100vw;
+
+}
+
+</style>
+</head>
+<body>
+
+<div id="clickedItem">
+
+</div>
+
+<!-- Six diffferent tags with different words within -->
+
+<div class="main-div">
+
+<div class="card" id="1" onclick="addRemove(1)" >
+
+Mario 
+
+</div>
+
+<div class="card" id="2" onclick="addRemove(2)">
+
+Zelda
+
+</div>
+
+<div class="card" id="3" onclick="addRemove(3)">
+
+Splatoon
+
+</div>
+
+<div class="card" id="4" onclick="addRemove(4)">
+
+Pokemon
+
+</div>
+
+<div class="card" id="5" onclick="addRemove(5)">
+
+Animal Crossing
+
+</div>
+
+<div class="card" id="6" onclick="addRemove(6)">
+
+Xenoblade
+
+</div>
+</div>
+
+<script>
+
+const addRemove=(id)=>{
+
+const clickedItem=document.getElementById("clickedItem");
+
+for(let i=1;i<=6;i++){
+
+/*This loop will iterate for each element*/
+
+const element=document.getElementById(i)
+
+if(i==id){
+
+element.classList.add('click');/*This will be adding the click class for clicked div*/
+
+clickedItem.textContent=element.textContent
+
+}
+
+else{
+
+element.classList.remove('click');/*This will be removing click class for remining divs*/
+
+}
+
+   }
+      }
+
+</script>
+</body>
+</html>
+
